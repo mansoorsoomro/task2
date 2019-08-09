@@ -1,0 +1,10 @@
+
+<ion-content padding>
+  <ion-icon (click)="close()" name="close"></ion-icon>
+  <div style="height: 90px" id="space"></div>
+  <img src="../assets/imgs/poki.png">
+  <h2 text-center>{{this.value.name}}</h2>
+  <p text-center>{{this.value.url}}</p>
+  <button ion-button block (click)="senddata()" *ngIf="liked == 'false'">like</button>
+  <button ion-button block style="background-color: red" *ngIf="liked == 'true'">liked</button>
+</ion-content>

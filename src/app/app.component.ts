@@ -4,7 +4,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import * as firebase from 'firebase';
 
+const config = {
+  apiKey: "AIzaSyBXNWv7qOITlDY8sT3s0p0-_2KyXYWwCYY",
+    authDomain: "task-ac317.firebaseapp.com",
+    databaseURL: "https://task-ac317.firebaseio.com",
+    projectId: "task-ac317",
+    storageBucket: "",
+    messagingSenderId: "271528660660",
+    appId: "1:271528660660:web:31a97a08f9652e0e"
+};
 @Component({
   templateUrl: 'app.html'
 })
@@ -18,5 +28,6 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    firebase.initializeApp(config);
   }
 }
